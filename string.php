@@ -28,29 +28,4 @@ $frase = '<p>Ciao oggi ho visto '.$nome.' '.$cognome. '</p>';
 <p class="testo-rosso"> Ciao oggi ho visto  <?php echo "$nome $cognome" ?> </p>
 <?php echo $frase; ?>
 
-<?php
-//  commento singola riga
-/* 
-    commento multiriga
-*/
-echo "<h2>Array</h2>";
-// indicizzati
-
-$colori  = array('red','green','blue');
-// echo $colori;
-
-echo $colori[0]."<br>";
-echo "$colori[1] <br>";
-
-// aggiunge un valore in coda array
-$colori[] = "yellow";
-
-echo "<pre>";
-print_r($colori);
-echo "</pre>";
-
-?>
-
-
-</body>
 </html>
