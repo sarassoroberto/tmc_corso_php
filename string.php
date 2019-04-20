@@ -23,7 +23,7 @@ $cognome = "Rossi";
 
 $frase = "<p>Ciao oggi ho visto $nome $cognome </p>";
 $frase = '<p>Ciao oggi ho visto $nome $cognome </p>';
-$frase = '<p>Ciao oggi ho visto '.$nome.' '.$cognome. '</p>';
+$frase = '<p>Ciao oggi ho visto ' . $nome . ' ' . $cognome .  '</p>';
 ?> 
 <p class="testo-rosso"> Ciao oggi ho visto  <?php echo "$nome $cognome" ?> </p>
 <?php echo $frase; ?>

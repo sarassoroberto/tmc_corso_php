@@ -2,9 +2,16 @@
 $persona = array(
     'nome' => 'Roberto',
     'cognome'=> 'Rossi',
-    'gusti_gelato_preferiti' => array('fragola','menta','ciccolato')
+    'gusti_gelato_preferiti' => array(
+                                    'fragola',
+                                    'menta',
+                                    'ciccolato'
+                                    )
 );
 echo $persona['nome'];
+
+
+
 
 /**
  * gusti_gelato_preferiti contiene un array indicizzato
