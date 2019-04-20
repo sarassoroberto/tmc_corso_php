@@ -30,12 +30,15 @@ $persona = array(
 <body>
    
     <div class="persona">
-        <h3>Roberto Rossi</h3>
+        <h3><?php echo $persona['nome'].' '.$persona['cognome'] ?></h3>
         <p>gusti di gelato: </p>
         <ul>
-            <li>fragola</li>
-            <li>menta</li>
-            <li>ciccolato</li>
+            <?php 
+            foreach ($persona['gusti_gelato_preferiti'] as $gusto) {
+                echo "<li>$gusto</li>";
+            } 
+            ?>
+            
         </ul>
     </div>
 </body>
