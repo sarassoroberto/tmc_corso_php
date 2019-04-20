@@ -8,10 +8,8 @@ $persona = array(
                                     'ciccolato'
                                     )
 );
-echo $persona['nome'];
 
-
-
+//echo $persona['nome'];
 
 /**
  * gusti_gelato_preferiti contiene un array indicizzato
@@ -20,12 +18,6 @@ echo $persona['nome'];
  * 
  *       rappresentare un elenco di persone. 
  */
-
-
-/*
-$persona = array('Roberto','Rossi');
-echo $persona[0];
-*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,6 +28,15 @@ echo $persona[0];
     <title>Array Associativi</title>
 </head>
 <body>
-    <h1>Array associativi</h1>
+   
+    <div class="persona">
+        <h3>Roberto Rossi</h3>
+        <p>gusti di gelato: </p>
+        <ul>
+            <li>fragola</li>
+            <li>menta</li>
+            <li>ciccolato</li>
+        </ul>
+    </div>
 </body>
 </html>
