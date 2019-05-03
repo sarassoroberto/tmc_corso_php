@@ -11,6 +11,8 @@ $studente->cognome = "Rossi";
 $studente->classe = 2;
 $studente->sezione = "B";
 
+$studente->email = "marco.rossi@email.edu";
+
 print_r($studente);
 
 
@@ -21,5 +23,8 @@ $professore->nome = "Giovanni";
 $professore->cognome = "Sbattuti";
 $professore->classe = 2;
 $professore->sezione = "B";
+
+$professore->email = "giovanni.sbattuti@email.edu";
+
 
 print_r($professore);

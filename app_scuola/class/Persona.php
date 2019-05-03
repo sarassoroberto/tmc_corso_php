@@ -5,4 +5,5 @@ class Persona
     public $cognome;
     public $classe;
     public $sezione;
+    public $email;
 }
