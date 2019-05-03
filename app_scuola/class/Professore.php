@@ -1,10 +1,6 @@
 <?php
-class Professore
+class Professore extends Persona
 {
-    /** proprietà o attributi */
-    public $nome;
-    public $cognome;
-    public $classe;
-    public $sezione;
+    /* i voti sono la caratteristica che differenzia il Professore da una Persona */
     public $materia;
 }

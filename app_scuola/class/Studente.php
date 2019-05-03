@@ -1,10 +1,6 @@
 <?php
-class Studente
+class Studente extends Persona
 {
-    /** proprietà o attributi */
-    public $nome;
-    public $cognome;
+    /* i voti sono la caratteristica che differenzia lo Studente da una Persona */
     public $voti = array();
-    public $classe;
-    public $sezione;
 }
