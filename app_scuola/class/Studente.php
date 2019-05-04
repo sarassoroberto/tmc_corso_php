@@ -13,12 +13,11 @@ class Studente extends Persona
      */
      public function aggiungiVoto($voto)
      {
-         if(is_string($voto))  {
+         //Se non (!) è in numero (is_numeric)
+         if(!is_numeric($voto))  {
             return false; 
          }
-
-
-
+         
          /* $this indica che state usando i voti dell'istanza dello studente*/
          $this->voti[] = $voto;
      }
