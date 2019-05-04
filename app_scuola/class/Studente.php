@@ -9,8 +9,16 @@ class Studente extends Persona
     public $voti = array();
 
      /* metodo */
+     /* usato is_numeric: https://www.php.net/manual/en/function.is-numeric.php
+     */
      public function aggiungiVoto($voto)
      {
+         if(is_string($voto))  {
+            return false; 
+         }
+
+
+
          /* $this indica che state usando i voti dell'istanza dello studente*/
          $this->voti[] = $voto;
      }
