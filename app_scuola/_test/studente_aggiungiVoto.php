@@ -16,5 +16,11 @@ $studente->aggiungiVoto(13);
 $studente->aggiungiVoto(-2);
 
 
+// $studente->aggiungiVoto(5);
+$studente->aggiungiVoto(7);
+
 echo "Numero di voti: ". count($studente->voti)."\n";
 print_r($studente->voti);
+
+echo "La media di $studente->nome è ".$studente->ottieniMedia() . "\n\n";
+

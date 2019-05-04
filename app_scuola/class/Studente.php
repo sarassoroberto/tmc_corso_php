@@ -13,11 +13,17 @@ class Studente extends Persona
      */
      public function aggiungiVoto($voto)
      {
-         //Se non (!) è in numero (is_numeric)
-         if(!is_numeric($voto))  {
+         // Se non (!) è in numero (is_numeric)
+         // il punto ! operatore Booleano (not)
+         if(! is_numeric($voto))  {
             return false; 
          }
-         
+
+         if($voto < 1 or $voto > 10 ){
+             return false;
+         }
+
+
          /* $this indica che state usando i voti dell'istanza dello studente*/
          $this->voti[] = $voto;
      }
