@@ -1,4 +1,5 @@
 <?php
+require '../class/Persona.php';
 require '../class/Docente.php';
 
 // crea un istanza della classe Studente
