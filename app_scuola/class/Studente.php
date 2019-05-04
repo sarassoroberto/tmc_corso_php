@@ -6,7 +6,7 @@
 class Studente extends Persona
 {
     // proprietà e  i metodi che riguardano lo Studente
-    public $voti = array();
+    private $voti = array();
 
      /* metodo */
      /* usato is_numeric: https://www.php.net/manual/en/function.is-numeric.php

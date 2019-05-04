@@ -1,11 +1,25 @@
 <?php
 class Persona {
-    public $nome;
-    public $cognome;
-    public $email;
+    private $nome;
+    private $cognome;
+    private $email;
    
-    public $classe;
-    public $sezione;
+    private $classe;
+    private $sezione;
+
+    public function setNome($nome)
+    {
+        
+        $this->nome = $nome;
+    
+    }
+
+    
+    public function gettNome()
+    {
+        
+       return  $this->$nome;
+    }
 
     // new Studente('roberto','spaghetti')
     //  
@@ -18,4 +32,14 @@ class Persona {
        $this->sezione = $sezione;
 
     }
+
+    /**
+     * Get the value of cognome
+     */ 
+    public function getCognome()
+    {
+        return $this->cognome;
+    }
+
+   
 }

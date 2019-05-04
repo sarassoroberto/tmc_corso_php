@@ -3,6 +3,8 @@
 require '../class/Persona.php';
 require '../class/Studente.php';
 
+error_reporting(E_ALL);
+
 // crea un istanza della classe Studente passando dei parametri al costruttore
 $studente = new Studente('Roberto','Spaghetti');
 
@@ -19,8 +21,11 @@ $studente->aggiungiVoto(-2);
 // $studente->aggiungiVoto(5);
 $studente->aggiungiVoto(7);
 
+$studente->voti[0] = "ciccio";
+
 echo "Numero di voti: ". count($studente->voti)."\n";
 print_r($studente->voti);
 
 echo "La media di $studente->nome è ".$studente->ottieniMedia() . "\n\n";
+
 
