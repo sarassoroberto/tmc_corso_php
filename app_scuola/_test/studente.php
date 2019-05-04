@@ -3,13 +3,8 @@
 require '../class/Persona.php';
 require '../class/Studente.php';
 
-// crea un istanza della classe Studente
-$studente = new Studente();
-
-// Assegnare  proprietà a un istanza
-$studente->nome = "Roberto";
-$studente->cognome = "Spahetti";
-
+// crea un istanza della classe Studente passando dei parametri al costruttore
+$studente = new Studente('Roberto','Spaghetti');
 
 print_r($studente);
 
