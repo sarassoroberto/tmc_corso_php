@@ -21,11 +21,13 @@ $studente->aggiungiVoto(-2);
 // $studente->aggiungiVoto(5);
 $studente->aggiungiVoto(7);
 
-$studente->voti[0] = "ciccio";
+//$studente->voti[0] = "ciccio";
 
-echo "Numero di voti: ". count($studente->voti)."\n";
-print_r($studente->voti);
+echo "Numero di voti: ". count($studente->getVoti())."\n";
+print_r(
+    $studente->gettNome()
+);
 
-echo "La media di $studente->nome è ".$studente->ottieniMedia() . "\n\n";
+echo "La media di ". $studente->getNome() ." è ".$studente->ottieniMedia() . "\n\n";
 
 

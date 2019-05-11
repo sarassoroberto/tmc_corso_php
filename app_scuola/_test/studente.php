@@ -6,8 +6,12 @@ require '../class/Studente.php';
 // crea un istanza della classe Studente passando dei parametri al costruttore
 $studente = new Studente('Roberto','Spaghetti');
 
-echo $studente->nome = "Luca";
-echo $studente->nome ."\n";
+// $studente->setNome("Luca");
+// echo $studente->getNome() ."\n";
+$studente->setNome("Marco")->setCognome("Rossi");
+// $studente->setnome("Marco") ----> $studente->setCognome('Rossi')
+// echo $studente->getNome()."\n";
+// print_r($studente);
 
-print_r($studente);
+
 

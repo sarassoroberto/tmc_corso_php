@@ -27,6 +27,8 @@ class Studente extends Persona
          /* $this indica che state usando i voti dell'istanza dello studente*/
          $this->voti[] = $voto;
      }
+
+     
  
      public function ottieniMedia(){
          $somma_voti  = array_sum($this->voti);
@@ -35,4 +37,11 @@ class Studente extends Persona
          return $media;
      }
     
+    /**
+     * Get the value of voti
+     */ 
+    public function getVoti()
+    {
+        return $this->voti;
+    }
 }

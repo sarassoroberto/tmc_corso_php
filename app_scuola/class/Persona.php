@@ -7,19 +7,7 @@ class Persona {
     private $classe;
     private $sezione;
 
-    public function setNome($nome)
-    {
-        
-        $this->nome = $nome;
-    
-    }
-
-    
-    public function gettNome()
-    {
-        
-       return  $this->$nome;
-    }
+   
 
     // new Studente('roberto','spaghetti')
     //  
@@ -33,13 +21,89 @@ class Persona {
 
     }
 
-    /**
-     * Get the value of cognome
-     */ 
-    public function getCognome()
+    public function setNome($nome)
     {
-        return $this->cognome;
+        // non ci possono essere numeri   
+        $this->nome = $nome;
+        return $this;
     }
 
+    
+    public function gettNome()
+    {
+        
+       return  $this->nome;
+    }
+
+
+  
    
+
+    /**
+     * Get the value of classe
+     */ 
+    public function getClasse()
+    {
+        return $this->classe;
+    }
+
+    /**
+     * Set the value of classe
+     *
+     * @return  self
+     */ 
+    public function setClasse($classe)
+    {
+        $this->classe = $classe;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of sezione
+     */ 
+    public function getSezione()
+    {
+        return $this->sezione;
+    }
+
+    /**
+     * Set the value of sezione
+     *
+     * @return  self
+     */ 
+    public function setSezione($sezione)
+    {
+        $this->sezione = $sezione;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of email
+     */ 
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set the value of email
+     *
+     * @return  self
+     */ 
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of nome
+     */ 
+    public function getNome()
+    {
+        return $this->nome;
+    }
 }
