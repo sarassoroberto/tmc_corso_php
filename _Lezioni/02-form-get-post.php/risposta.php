@@ -27,19 +27,23 @@
         </p>
         <pre>
             <?php
-            print_r($_GET);
-            echo $_GET['ricerca'];
+            // print_r($_GET);
+            // echo $_GET['ricerca'];
             ?>
     
         </pre>
-
+ 
         <?php
         // https://php.net/manual/en/function.in-array.php
         // https://www.w3schools.com/php/func_array_in_array.asp
 
         $frutta = array("mela", "pera", "arancia");
 
-        $parola_da_cercare = $_GET['ricerca'];
+        $parola_da_cercare =  htmlspecialchars(
+                                                trim($_GET['ricerca'])
+                                              );
+
+
 
         if (in_array($parola_da_cercare, $frutta)) {
             echo "parola trovata";
@@ -53,7 +57,7 @@
     </main>
 
 
-    <script>location.href = "https://www.lastampa.it/";</script>
+   
    
 </body>
 

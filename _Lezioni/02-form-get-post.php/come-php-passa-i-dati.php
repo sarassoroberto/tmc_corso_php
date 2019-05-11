@@ -39,13 +39,23 @@
         <input type="text" name="ricerca">
         <button type="submit">cerca nel sito </button>
       </form>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
+
+      <h2>Inserisci studente</h2>
+      <form action="inserisci_studente.php">
+        <div>
+            <label >nome </label>
+            <input type="text" name="nome">
+        </div>
+        <div>
+            <label >cognome </label>
+            <input type="text" name="cognome">
+        </div>
+        <div>
+            <button type="submit">aggiungi studente</button>
+            <button type="reset">cancalla</button>
+        </div>
+      </form>
+
     </main>
 
 
