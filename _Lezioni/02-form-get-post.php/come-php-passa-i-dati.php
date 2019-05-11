@@ -40,8 +40,10 @@
         <button type="submit">cerca nel sito </button>
       </form>
 
+    <hr>
+
       <h2>Inserisci studente</h2>
-      <form action="inserisci_studente.php">
+      <form action="inserisci_studente.php" method="POST">
         <div>
             <label >nome </label>
             <input type="text" name="nome">
