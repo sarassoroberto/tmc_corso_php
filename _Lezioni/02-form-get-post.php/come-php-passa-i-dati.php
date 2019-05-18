@@ -1,3 +1,7 @@
+<?php
+// print_r($_SERVER);
+print_r($_POST);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +38,7 @@
       <p><b>input[text]:</b> Permette di raccogliere i dati di una riga di testo (striga) </p>
       <p><b>button[submit]:</b> Permette di raccogliere i dati di una riga di testo (striga) </p>
 
-      <form action="risposta.php">
+      <form action="<?php echo $_SERVER['PHP_SELF'] ?>">
         <label>Cosa vuoi cercare: </label>  
         <input type="text" name="ricerca">
         <button type="submit">cerca nel sito </button>
@@ -43,7 +47,7 @@
     <hr>
 
       <h2>Inserisci studente</h2>
-      <form action="inserisci_studente.php" method="POST">
+      <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
         <div>
             <label >nome </label>
             <input type="text" name="nome">
