@@ -1,5 +1,6 @@
 <?php
 class Persona {
+    private $id;
     private $nome;
     private $cognome;
     private $email;
@@ -105,5 +106,25 @@ class Persona {
     public function getNome()
     {
         return $this->nome;
+    }
+
+    /**
+     * Get the value of id
+     */ 
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */ 
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
     }
 }
