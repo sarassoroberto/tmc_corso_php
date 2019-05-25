@@ -12,7 +12,7 @@ class Persona {
 
     // new Studente('roberto','spaghetti')
     //  
-    function __construct($nome,$cognome,$classe = '',$sezione = '')
+    function __construct($nome ='',$cognome='' ,$classe = '',$sezione = '')
     {
        // $this->nome rappresenta la proprietà "nome" dell' istanza della Persona
        $this->nome = $nome;
@@ -127,4 +127,24 @@ class Persona {
 
         return $this;
     }
+
+       /**
+        * Get the value of cognome
+        */ 
+       public function getCognome()
+       {
+              return $this->cognome;
+       }
+
+       /**
+        * Set the value of cognome
+        *
+        * @return  self
+        */ 
+       public function setCognome($cognome)
+       {
+              $this->cognome = $cognome;
+
+              return $this;
+       }
 }
