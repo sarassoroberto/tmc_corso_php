@@ -51,7 +51,8 @@ class StudenteModel
         // PDO::FETCH_ASSOC è invece un parametro più specifico che restituisce un array indicizzato
         //  tramite i nomi dei campi presenti in tabella.
 
-        return $stm->fetchAll(PDO::FETCH_ASSOC)[0]; //0
+         return $stm->fetchAll(PDO::FETCH_ASSOC)[0]; //0
+        //return $stm->fetchAll(PDO::FETCH_CLASS,'Studente')[0]; //0
        
     }
 
@@ -68,7 +69,8 @@ class StudenteModel
 
     public function update(Studente $studente)
     {
-        
+        echo "dentro update";
+        print_r($studente);
         // ottengo il nome dello studente (che verra aggiornato)
         $nome = $studente->getNome();
         $id = $studente->getId();
@@ -82,7 +84,7 @@ class StudenteModel
                         cognome = :cognome,
                         email = :email,
                         classe = :classe,
-                        sezione = :sezione,
+                        sezione = :sezione
 
              WHERE id_studente = :id      
             ");
