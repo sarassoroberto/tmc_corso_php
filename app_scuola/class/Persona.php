@@ -1,13 +1,12 @@
 <?php
 class Persona
 {
-    private $id;
-    private $nome;
-    private $cognome;
-    private $email;
+    protected $nome;
+    protected $cognome;
+    protected $email;
 
-    private $classe;
-    private $sezione;
+    protected $classe;
+    protected $sezione;
 
 
 
@@ -22,7 +21,7 @@ class Persona
         $this->sezione = $sezione;
     }
 
-   
+
     public function setNome($nome)
     {
         // non ci possono essere numeri   

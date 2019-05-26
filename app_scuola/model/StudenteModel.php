@@ -8,14 +8,8 @@ class StudenteModel
 
         try {
             $dsn = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME;
-            // "mysql:host=$servername;dbname=$dbname"
-            // dichiarazione$dsn
-            // $conn = new PDO("mysql:host=$servername;dbname=myDB", $username, $password);
             $this->conn = new PDO($dsn, DB_USER, DB_PASSWORD);
-
-            // set the PDO error mode to exception
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            // echo "Connected successfully"; 
         } catch (PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
         }
@@ -44,26 +38,26 @@ class StudenteModel
         $stm = $this->conn->prepare("SELECT * 
                                      FROM Studente 
                                      where id_studente=:id_studente");
-        $stm->bindValue(':id_studente',$id_studente);   
+        $stm->bindValue(':id_studente', $id_studente);
 
         $stm->execute();
 
         // PDO::FETCH_ASSOC è invece un parametro più specifico che restituisce un array indicizzato
         //  tramite i nomi dei campi presenti in tabella.
 
-         return $stm->fetchAll(PDO::FETCH_ASSOC)[0]; //0
-        //return $stm->fetchAll(PDO::FETCH_CLASS,'Studente')[0]; //0
-       
+        return $stm->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'Studente')[0]; //0
+        // ->fetchAll(PDO::FETCH_FUNC, function($first) {return $first;});
+
     }
 
     public function readAll()
     {
-        $stm = $this->conn->prepare("SELECT * FROM Studente");   
+        $stm = $this->conn->prepare("SELECT * FROM Studente");
 
         $stm->execute();
 
         return $stm->fetchAll(PDO::FETCH_ASSOC); //0
-       
+
     }
 
 
@@ -87,24 +81,22 @@ class StudenteModel
                         sezione = :sezione
 
              WHERE id_studente = :id      
-            ");
+            "
+        );
 
 
         // associo i valori
-        $stm->bindValue(':nome',$nome);    
-        $stm->bindValue(':id',$id);    
-        $stm->bindValue(':cognome',$cognome);    
-        $stm->bindValue(':email',$email);    
-        $stm->bindValue(':classe',$studente->getClasse());    
-        $stm->bindValue(':sezione',$studente->getSezione());    
+        $stm->bindValue(':nome', $nome);
+        $stm->bindValue(':id', $id);
+        $stm->bindValue(':cognome', $cognome);
+        $stm->bindValue(':email', $email);
+        $stm->bindValue(':classe', $studente->getClasse());
+        $stm->bindValue(':sezione', $studente->getSezione());
 
         // segue la query 
         $stm->execute();
 
         return $stm->rowCount();
-
-       
-        
     }
 
 
@@ -112,11 +104,11 @@ class StudenteModel
     {
         $stm = $this->conn->prepare("DELETE FROM Studente where id_studente=7");
         $stm->execute();
-        
-        if(!$stm->rowCount()) {
+
+        if (!$stm->rowCount()) {
             echo "Record non trovato";
-        }else {
-        echo $stm->rowCount() . "Record cancellato con successo";
+        } else {
+            echo $stm->rowCount() . "Record cancellato con successo";
         }
     }
 }
