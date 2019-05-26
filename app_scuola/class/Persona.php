@@ -1,27 +1,28 @@
 <?php
-class Persona {
+class Persona
+{
     private $id;
     private $nome;
     private $cognome;
     private $email;
-   
+
     private $classe;
     private $sezione;
 
-   
+
 
     // new Studente('roberto','spaghetti')
     //  
-    function __construct($nome ='',$cognome='' ,$classe = '',$sezione = '')
+    function __construct($nome = '', $cognome = '', $classe = '', $sezione = '')
     {
-       // $this->nome rappresenta la proprietà "nome" dell' istanza della Persona
-       $this->nome = $nome;
-       $this->cognome = $cognome;
-       $this->classe = $classe;
-       $this->sezione = $sezione;
-
+        // $this->nome rappresenta la proprietà "nome" dell' istanza della Persona
+        $this->nome = $nome;
+        $this->cognome = $cognome;
+        $this->classe = $classe;
+        $this->sezione = $sezione;
     }
 
+   
     public function setNome($nome)
     {
         // non ci possono essere numeri   
@@ -29,20 +30,20 @@ class Persona {
         return $this;
     }
 
-    
+
     public function gettNome()
     {
-        
-       return  $this->nome;
+
+        return  $this->nome;
     }
 
 
-  
-   
+
+
 
     /**
      * Get the value of classe
-     */ 
+     */
     public function getClasse()
     {
         return $this->classe;
@@ -52,7 +53,7 @@ class Persona {
      * Set the value of classe
      *
      * @return  self
-     */ 
+     */
     public function setClasse($classe)
     {
         $this->classe = $classe;
@@ -62,7 +63,7 @@ class Persona {
 
     /**
      * Get the value of sezione
-     */ 
+     */
     public function getSezione()
     {
         return $this->sezione;
@@ -72,7 +73,7 @@ class Persona {
      * Set the value of sezione
      *
      * @return  self
-     */ 
+     */
     public function setSezione($sezione)
     {
         $this->sezione = $sezione;
@@ -82,7 +83,7 @@ class Persona {
 
     /**
      * Get the value of email
-     */ 
+     */
     public function getEmail()
     {
         return $this->email;
@@ -92,7 +93,7 @@ class Persona {
      * Set the value of email
      *
      * @return  self
-     */ 
+     */
     public function setEmail($email)
     {
         $this->email = $email;
@@ -102,7 +103,7 @@ class Persona {
 
     /**
      * Get the value of nome
-     */ 
+     */
     public function getNome()
     {
         return $this->nome;
@@ -110,7 +111,7 @@ class Persona {
 
     /**
      * Get the value of id
-     */ 
+     */
     public function getId()
     {
         return $this->id;
@@ -120,7 +121,7 @@ class Persona {
      * Set the value of id
      *
      * @return  self
-     */ 
+     */
     public function setId($id)
     {
         $this->id = $id;
@@ -128,23 +129,23 @@ class Persona {
         return $this;
     }
 
-       /**
-        * Get the value of cognome
-        */ 
-       public function getCognome()
-       {
-              return $this->cognome;
-       }
+    /**
+     * Get the value of cognome
+     */
+    public function getCognome()
+    {
+        return $this->cognome;
+    }
 
-       /**
-        * Set the value of cognome
-        *
-        * @return  self
-        */ 
-       public function setCognome($cognome)
-       {
-              $this->cognome = $cognome;
+    /**
+     * Set the value of cognome
+     *
+     * @return  self
+     */
+    public function setCognome($cognome)
+    {
+        $this->cognome = $cognome;
 
-              return $this;
-       }
+        return $this;
+    }
 }
