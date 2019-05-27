@@ -13,7 +13,7 @@ class Validator
     public function required($value)
     {
         $clean_value = $this->cleanVariable($value);
-        return ($clean_value != '' && isset($clean_value) );
+        return ($clean_value != '' && isset($clean_value));
     }
 
     public  function email($email, $options = [])
@@ -33,7 +33,7 @@ class Validator
 
         if (!$this->getOptionsRequired($options) && $this->is_null($value)) {
             return true;
-        } else { };
+        }
 
 
         return boolval(preg_match("/^([a-zA-Z' ]+)$/", $value));
@@ -50,8 +50,19 @@ class Validator
 
     public function integer($int, $options = [])
     {
-        $int = $this->cleanVariable($int);
-        if (isset($options['required']) && $this->required($int)) {
+        if (!$this->getOptionsRequired($options) && $this->is_null($int)) {
+            return true;
+        }
+
+        if ($options) {
+            $opt = array("options" => array("min_range" => $options['min'], "max_range" => $options['max']));
+        } else {
+            $opt = $options;
+        }
+
+        if ($t = filter_var($int, FILTER_VALIDATE_INT, $opt) !== false) {
+            return true;
+        } else {
             return false;
         }
     }

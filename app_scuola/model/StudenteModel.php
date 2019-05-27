@@ -56,7 +56,7 @@ class StudenteModel
 
         $stm->execute();
 
-        return $stm->fetchAll(PDO::FETCH_ASSOC); //0
+        return $stm->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'Studente'); //0
 
     }
 

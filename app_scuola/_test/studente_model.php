@@ -9,6 +9,6 @@ include "../class/Studente.php";
 
 
 $sm = new StudenteModel();
-$res = $sm->read(1);
+$res = $sm->readAll();
 
 print_r($res);
